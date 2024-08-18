@@ -42,7 +42,7 @@ function queryTable(table, query) {
 }
 function main() {
     // Get command-line arguments
-    if (process.argv.length < 2) {
+    if (process.argv.length < 3) {
         console.log("please provide the path to a json file when running this program");
         return;
     }
@@ -56,7 +56,7 @@ function main() {
         console.error("Error reading provided file. Please provide a valid path to a json file");
         return;
     }
-    console.log("Please provide a query in the format: SELECT (comma separated list of cols or *) FROM TABLE WHERE (conditions) LIMIT (integer)");
+    console.log("Please provide a query in the format: SELECT (comma separated list of cols or *) FROM table WHERE (conditions) LIMIT (integer);");
     console.log("(LIMIT is optional)");
     console.log("");
     // Create an interface for reading input from the console

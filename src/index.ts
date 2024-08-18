@@ -23,7 +23,7 @@ function queryTable(table: Object[], query: string): Object[] | undefined {
 
 function main() {
 	// Get command-line arguments
-	if (process.argv.length < 2) {
+	if (process.argv.length < 3) {
 		console.log(
 			"please provide the path to a json file when running this program"
 		);
@@ -43,7 +43,7 @@ function main() {
 	}
 
 	console.log(
-		"Please provide a query in the format: SELECT (comma separated list of cols or *) FROM TABLE WHERE (conditions) LIMIT (integer);"
+		"Please provide a query in the format: SELECT (comma separated list of cols or *) FROM table WHERE (conditions) LIMIT (integer);"
 	);
 	console.log("(LIMIT is optional)");
 	console.log("");
