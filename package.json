@@ -1,0 +1,27 @@
+{
+	"name": "textql_challenge",
+	"version": "1.0.0",
+	"description": "textql sql parsing challenge",
+	"main": "index.js",
+	"scripts": {
+		"start": "ts-node src/index.ts",
+		"build": "tsc",
+		"compile": "esbuild src/index.ts --bundle --platform=node --outfile=dist/main.js",
+		"pkg": "npx pkg ./dist/main.js --out-path=./dist --targets node16-linux-x64,node16-macos-x64,node16-win-x64",
+		"build_exe": "npm run build && npm run compile && npm run pkg"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/node": "^22.2.0",
+		"esbuild": "^0.23.0",
+		"pkg": "^5.8.1",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.5.4"
+	},
+	"dependencies": {
+		"fs": "^0.0.1-security",
+		"ohm-js": "^17.1.0",
+		"path": "^0.12.7"
+	}
+}
